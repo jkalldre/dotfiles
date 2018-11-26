@@ -1,0 +1,56 @@
+#
+# alias
+#
+
+# Directory listing.
+# If the OS is not OS X, do this too.
+if [[ `uname` != "Darwin" ]]; then
+    alias ls="ls --color=auto"
+fi
+alias ll="ls -l"
+alias lsh="ls -a"
+alias llh="ls -al"
+
+# Make grep colorful.
+alias grep="grep --color=auto"
+
+# grep history so we can easily find a recent command.
+grepHistory() {
+  history | grep "$1"
+}
+alias gh=grepHistory
+
+# git line count by author.
+# Taken from:
+# http://stackoverflow.com/questions/1265040/how-to-count-total-lines-changed-by-a-specific-author-in-a-git-repository
+gitLineCountByAuthor() {
+  git log --author="$1" --pretty=tformat: --numstat | gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s removed lines: %s total lines: %s\n", add, subs, loc }' -
+}
+alias gitlc=gitLineCountByAuthor
+
+# More convenient xdg-open alias.
+alias open=xdg-open
+
+# Convert Markdown to HTML.
+alias md2html="pandoc -s -f markdown -t html"
+
+# Toggle IPv6.
+toggleIPv6Setting() {
+  if [[ `sudo sysctl -n net.ipv6.conf.all.disable_ipv6` = '0' ]]; then
+    echo IPv6 is enabled. Disabling...
+    sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+    echo IPv6 is now disabled.
+  else
+    echo IPv6 is disabled. Enabling...
+    sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0
+    echo IPv6 is now enabled.
+  fi
+}
+alias toggleipv6=toggleIPv6Setting
+
+# More convenient piping into clipboard
+alias cb="xclip -selection clipboard"
+
+# Get directory size
+alias dirsize="du -hs"
+
