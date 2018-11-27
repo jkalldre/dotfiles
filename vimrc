@@ -76,7 +76,7 @@ set showmatch
 set ruler
 
 " show line numbers relative to cursor instead of line numbers relative to beginning of file
-set relativenumber
+" set relativenumber
 
 " hide buffers when switching to new files instead of closing them
 set hidden

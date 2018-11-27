@@ -1,5 +1,6 @@
 #!/bin/bash
-cp alias ~/.alias
-cp bashrc ~/.bashrc
-cp gitconfig ~/.gitconfig
-cp vimrc ~/.vimrc
+cp ~/dotfiles/alias ~/.alias
+cp ~/dotfiles/bashrc ~/.bashrc
+cp ~/dotfiles/bash_profile ~/.bash_profile
+cp ~/dotfiles/gitconfig ~/.gitconfig
+cp ~/dotfiles/vimrc ~/.vimrc
