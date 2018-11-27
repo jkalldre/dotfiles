@@ -27,7 +27,7 @@ if [[ `uname` != "Darwin" ]]; then
 
     # Set display for terminal prompt.
     #PS1='[\u@\h \W]\$ '
-    PS1='\e[35m[$PWD]\n\e[36m[\u] \e[97m$ ' 
+    PS1='\e[35m[$PWD]\n\e[36m[\u] \e[39m$ ' 
 
     # Make vim the default editor.
     export VISUAL=vim
