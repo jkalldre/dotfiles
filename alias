@@ -92,7 +92,7 @@ alias pull=' git pull'
 alias status=' git status'
 
 fpush() {
-  git add -A && git commit -m $1 && git push
+  git add -A && git commit -m "$1" && git push
 }
 
 # Update local dotfiles
@@ -100,3 +100,4 @@ alias update='~/dotfiles/update'
 
 # Commands
 alias q='exit'
+alias nb='start bash'
