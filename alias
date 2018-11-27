@@ -79,3 +79,17 @@ alias cb="xclip -selection clipboard"
 # Get directory size
 alias dirsize="du -hs"
 
+# Directories
+alias vimrc='vim ~/dotfiles/vimrc'
+alias bashrc='vim ~/dotfiles//bashrc'
+alias dotfile='cd ~/dotfiles'
+
+#GIT
+alias commit=' git commit -m'
+alias add=' git add -A'
+alias push=' git push'
+alias pull=' git pull'
+alias status=' git status'
+
+# Update local dotfiles
+./update

@@ -242,7 +242,7 @@ inoremap <leader>, <C-x><C-o>
 """
 """ PATHOGEN PLUGIN
 """
-execute pathogen#infect()
+"""execute pathogen#infect()
 
 
 """
