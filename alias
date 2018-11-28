@@ -101,3 +101,4 @@ alias update='~/dotfiles/update'
 # Commands
 alias q='exit'
 alias nb='start bash'
+alias qrify='~/dotfiles/func/qrify'
