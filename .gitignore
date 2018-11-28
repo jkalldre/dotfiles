@@ -1,3 +1,5 @@
 # Ignore
 gitconfig.local
 alias.local
+*.png
+func/*.png
