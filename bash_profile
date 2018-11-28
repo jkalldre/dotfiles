@@ -26,8 +26,7 @@ if [[ `uname` != "Darwin" ]]; then
     [[ $- != *i* ]] && return
 
     # Set display for terminal prompt.
-    #PS1='[\u@\h \W]\$ '
-    PS1='\e[35m[$PWD]\n\e[36m[\u] \e[39m$ ' 
+    PS1='\[\e[35m\][$PWD]\n\[\e[36m\][\u] \[\e[39m\]$ ' 
 
     # Make vim the default editor.
     export VISUAL=vim
